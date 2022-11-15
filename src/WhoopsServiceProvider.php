@@ -6,8 +6,8 @@
 
 namespace Whoops\Provider\Phalcon;
 
-use Phalcon\DI;
-use Phalcon\DI\Exception;
+use Phalcon\Di\Di;
+use Phalcon\Di\Exception;
 use Whoops\Handler\JsonResponseHandler;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
@@ -15,12 +15,12 @@ use Whoops\Run;
 class WhoopsServiceProvider
 {
     /**
-     * @param DI $di
+     * @param Di $di
      */
     public function __construct(DI $di = null)
     {
         if (!$di) {
-            $di = DI::getDefault();
+            $di = Di::getDefault();
         }
 
         // There's only ever going to be one error page...right?
