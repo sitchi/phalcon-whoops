@@ -1,5 +1,5 @@
 {
-    "name": "whoops/phalcon",
+    "name": "sitchi/phalcon-whoops",
     "description": "Whoops provider for Phalcon",
     "license": "MIT",
     "authors": [
